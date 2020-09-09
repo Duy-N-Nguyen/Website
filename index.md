@@ -19,7 +19,7 @@
     <h1>Form Demo</h1>
     <form>
        <fieldset>
-          <legend>Selecting elements</legend>
+          <legend>Fates char select</legend>
           <p>
              <label>Select list</label>
              <select id = "myList">

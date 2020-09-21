@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
     <head>
         <title>Example</title>
@@ -9,7 +8,7 @@
 </html>
 
 
-<!DOCTYPE HTML>
+
 <html lang = "en">
   <head>
     <title>formDemo.html</title>

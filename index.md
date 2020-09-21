@@ -17,7 +17,7 @@
     <meta charset = "UTF-8" />
   </head>
   <body>
-    <h1>Form Demo</h1>
+    <h3>Form Demo</h3>
     <form>
        <fieldset>
           <legend>Fates char select</legend>

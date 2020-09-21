@@ -1,3 +1,5 @@
+<h1>Fate/Grand Order Calculator</h1>
+
 <html>
     <head>
         <title>Example</title>

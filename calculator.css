@@ -23,17 +23,20 @@ body {
 }
 
 .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Adjust the number of columns as needed */
-    grid-gap: 5px; /* Add spacing between buttons */
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons .row {
+    display: flex;
+    justify-content: center;
 }
 
 .buttons button {
-    width: 100%;
+    width: 50px;
     height: 50px;
     font-size: 20px;
-    /* You can remove the width property if you want buttons to take equal width */
     margin: 5px;
     cursor: pointer;
 }
@@ -41,4 +44,3 @@ body {
 .buttons button:hover {
     background-color: #ccc;
 }
-

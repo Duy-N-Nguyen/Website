@@ -1,17 +1,27 @@
-let display = document.getElementById("display");
+// script.js
 
-function appendToDisplay(value) {
-    display.value += value;
-}
+let displayValue = "";
 
 function clearDisplay() {
-    display.value = "";
+    displayValue = "";
+    updateDisplay();
+}
+
+function appendToDisplay(value) {
+    displayValue += value;
+    updateDisplay();
 }
 
 function calculateResult() {
     try {
-        display.value = eval(display.value);
+        displayValue = eval(displayValue);
+        updateDisplay();
     } catch (error) {
-        display.value = "Error";
+        displayValue = "Error";
+        updateDisplay();
     }
+}
+
+function updateDisplay() {
+    document.getElementById("display").value = displayValue;
 }

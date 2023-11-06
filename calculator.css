@@ -1,51 +1,12 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+*{
     margin: 0;
-    background-color: #f2f2f2;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
-.calculator {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 5px;
-    width: 300px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
-#display {
+.container{
     width: 100%;
-    height: 40px;
-    font-size: 20px;
-    text-align: right;
-    margin-bottom: 10px;
-    border: none;
-    background-color: #444;
-    color: white;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 5px;
-    padding: 5px;
-}
-
-button {
-    width: 100%;
-    height: 60px;
-    font-size: 20px;
-    background-color: #666;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-
-
-.operator {
-    background-color: #ff9500;
-    color: #333;
+    height:100vh;
+    background: #e3f9ff;
 }

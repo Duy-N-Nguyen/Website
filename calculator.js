@@ -1,17 +1,15 @@
-let display = document.getElementById("display");
+function clearDisplay() {
+    document.getElementById("display").value = "";
+}
 
 function appendToDisplay(value) {
-    display.value += value;
+    document.getElementById("display").value += value;
 }
 
-function clearDisplay() {
-    display.value = "";
-}
-
-function calculateResult() {
+function calculate() {
     try {
-        display.value = eval(display.value);
+        document.getElementById("display").value = eval(document.getElementById("display").value);
     } catch (error) {
-        display.value = "Error";
+        document.getElementById("display").value = "Error";
     }
 }

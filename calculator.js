@@ -22,17 +22,6 @@ function toggleParenthesis() {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
 function calculateResult() {
     try {
         const result = eval(document.getElementById('display').value);
@@ -41,15 +30,6 @@ function calculateResult() {
         document.getElementById('display').value = 'Error';
     }
 }
-
-
-
-
-
-
-
-
-
 
 function calculatePercentage() {
     const currentValue = parseFloat(document.getElementById('display').value);

@@ -87,14 +87,14 @@
 
 /* Specific button styles (Accent Color - 10%) */
 .calculator form input[value="="] {
-    background: #0742A0; /* Bright blue for the "=" button */
-    color: white;
+    background: #0742A0;
+    color: #C3E7FF;
 }
 
 /* Other specific button styles */
 .calculator form input[value="AC"] {
     background: #0F5324;
-    color: white;
+    color: #C3E7FF;
 }
 
 .calculator form input[value="÷"],
@@ -104,5 +104,5 @@
 .calculator form input[value="-"],
 .calculator form input[value="+"] {
     background: #004A77;
-    color: white;
+    color: #C3E7FF;
 }

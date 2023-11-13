@@ -1,20 +1,19 @@
 var left_parentheses_counter = 0;
+
 function toggleParenthesis() {
     const display = document.getElementById('display');
     const displayValue = display.value;
+
     if (displayValue.length === 0 || displayValue.charAt(displayValue.length - 1) === '(') {
         display.value += '(';
         left_parentheses_counter++;
-    }
-    else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter > 0) {
+    } else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter > 0) {
         display.value += ')';
         left_parentheses_counter--;
-    }
-    else if (left_parentheses_counter == 0) {
+    } else if (left_parentheses_counter === 0) {
         display.value += '(';
         left_parentheses_counter++;
-    }
-    else {
+    } else {
         display.value += ')';
         left_parentheses_counter--;
     }
@@ -25,39 +24,50 @@ function calculateResult() {
     const expression = display.value;
 
     try {
-        const result = evaluateExpression(expression);
+        const formattedExpression = handleMultiplication(expression);
+        const result = evaluateExpression(formattedExpression);
         display.value = result;
     } catch (error) {
         display.value = 'Error';
     }
 }
 
-function evaluateExpression(expression) {
-    // Use regular expressions to replace invalid characters for security
-    const sanitizedExpression = expression.replace(/[^0-9+\-*/().]/g, '');
+function handleMultiplication(expression) {
+    // Add multiplication operators between numbers and open parentheses
+    const formattedExpression = expression.replace(/(\d+)\(/g, '$1*(');
 
-    // Check for balanced parentheses
-    if (!areParenthesesBalanced(sanitizedExpression)) {
-        throw new Error('Unbalanced parentheses');
-    }
+    // Add multiplication operators between numbers inside consecutive parentheses
+    const withMultiplication = formattedExpression.replace(/\)(\d+)/g, ')*$1');
 
-    // Use the JavaScript `eval` function to evaluate the expression
-    return eval(sanitizedExpression);
+    // Add multiplication operators between two numbers in parentheses without an operator
+    const withPatternReplacement = replacePatterns(withMultiplication);
+
+    return withPatternReplacement;
 }
 
-function areParenthesesBalanced(expression) {
-    const stack = [];
+function replacePatterns(inputString) {
+    // Replace (x)(x) with (x)*(x)
+    let modifiedString = inputString.replace(/\((\d+)\)\((\d+)\)/g, '($1)*($2)');
 
-    for (let i = 0; i < expression.length; i++) {
-        if (expression[i] === '(') {
-            stack.push('(');
-        } else if (expression[i] === ')') {
-            if (stack.length === 0) {
-                return false; // Unbalanced closing parenthesis
-            }
-            stack.pop();
-        }
+    // Replace 9(x) with 9 * (x)
+    modifiedString = modifiedString.replace(/(\d+)\((\d+)\)/g, '$1 * ($2)');
+
+    return modifiedString;
+}
+
+function evaluateExpression(expression) {
+    // Parse the expression using a simple expression parser
+    const result = parseExpression(expression);
+    return result;
+}
+
+function parseExpression(expression) {
+    // Implement your expression parsing logic here
+    // You can use a library like math.js for more advanced parsing
+    // For simplicity, let's use eval in this example (not recommended for untrusted input)
+    try {
+        return eval(expression);
+    } catch (error) {
+        throw new Error('Error parsing expression');
     }
-
-    return stack.length === 0; // Stack should be empty for balanced parentheses
 }

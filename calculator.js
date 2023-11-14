@@ -39,6 +39,12 @@ function toggleParenthesis() {
     }
 }
 
+function calculatePercentage() {
+    var displayValue = document.getElementById('display').value;
+    var totalValue = 100;
+    display.value = (displayValue) / (totalValue);
+}
+
 function calculateResult() {
     const display = document.getElementById('display');
     const expression = display.value;
@@ -60,13 +66,29 @@ function handleMultiplication(expression) {
     const formattedExpression = expressionWithMultiplication.replace(/(\d+)\(/g, '$1*(');
 
     // Add multiplication operators between numbers inside consecutive parentheses
-    const withMultiplication = formattedExpression.replace(/\)(\d+)/g, ')*$1');
+    const withMultiplication = formattedExpression.replace(/\)\(/g, ')*(');
+
+    // Add multiplication operators between numbers inside consecutive parentheses with a leading decimal
+    const withDecimalMultiplication = withMultiplication.replace(/\)\.(\d+)/g, ')*.$1');
+
+    // Add multiplication operators between numbers inside consecutive parentheses with a non-digit character before the decimal
+    const withNonDigitDecimalMultiplication = withDecimalMultiplication.replace(/\)([^\d\.])\.(\d+)/g, ')*$1.$2');
 
     // Add multiplication operators between two numbers in parentheses without an operator
-    const withPatternReplacement = replacePatterns(withMultiplication);
+    const withPatternReplacement = replacePatterns(withNonDigitDecimalMultiplication);
 
     return withPatternReplacement;
 }
+
+function replacePatterns(expression) {
+    // Implement your logic for replacing patterns here
+    // This function is assumed to exist in your code
+    return expression;
+}
+
+// Example usage:
+const result = handleMultiplication('(8)(.5)');
+console.log(result);
 
 
 function replacePatterns(inputString) {

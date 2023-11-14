@@ -3,17 +3,23 @@ var left_parentheses_counter = 0;
 function toggleParenthesis() {
     const display = document.getElementById('display');
     const displayValue = display.value;
-
     if (displayValue.length === 0 || displayValue.charAt(displayValue.length - 1) === '(') {
         display.value += '(';
         left_parentheses_counter++;
-    } else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter > 0) {
+    }
+    else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter > 0) {
         display.value += ')';
         left_parentheses_counter--;
-    } else if (left_parentheses_counter === 0) {
+    }
+    else if (left_parentheses_counter == 0) {
         display.value += '(';
         left_parentheses_counter++;
-    } else {
+    }
+    else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter === 0) {
+        display.value += ')';
+        left_parentheses_counter++;
+    }
+    else {
         display.value += ')';
         left_parentheses_counter--;
     }
@@ -46,10 +52,10 @@ function handleMultiplication(expression) {
 }
 
 function replacePatterns(inputString) {
-    // Replace (x)(x) with (x)*(x)
+    // Replace (8)(8) with (8)*(8)
     let modifiedString = inputString.replace(/\((\d+)\)\((\d+)\)/g, '($1)*($2)');
 
-    // Replace 9(x) with 9 * (x)
+    // Replace 9(5) with 9 * (5)
     modifiedString = modifiedString.replace(/(\d+)\((\d+)\)/g, '$1 * ($2)');
 
     return modifiedString;

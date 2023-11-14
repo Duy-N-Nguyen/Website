@@ -53,8 +53,11 @@ function calculateResult() {
 }
 
 function handleMultiplication(expression) {
+    // Replace 'x' with '*'
+    const expressionWithMultiplication = expression.replace(/x/g, '*');
+
     // Add multiplication operators between numbers and open parentheses
-    const formattedExpression = expression.replace(/(\d+)\(/g, '$1*(');
+    const formattedExpression = expressionWithMultiplication.replace(/(\d+)\(/g, '$1*(');
 
     // Add multiplication operators between numbers inside consecutive parentheses
     const withMultiplication = formattedExpression.replace(/\)(\d+)/g, ')*$1');
@@ -64,6 +67,7 @@ function handleMultiplication(expression) {
 
     return withPatternReplacement;
 }
+
 
 function replacePatterns(inputString) {
     // Replace (x)(x) with (x)*(x)

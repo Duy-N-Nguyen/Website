@@ -1,34 +1,48 @@
-var left_parentheses_counter = 0;
+var parenthesesBalance = 0;
 
 function toggleParenthesis() {
     const display = document.getElementById('display');
     const displayValue = display.value;
-    if (displayValue.length === 0 || displayValue.charAt(displayValue.length - 1) === '(') {
+
+    if (parenthesesBalance < 0) {
+        parenthesesBalance = 0;
+    }
+
+    // Track the number of open and close parentheses in the display
+    const openParenCount = (displayValue.match(/\(/g) || []).length;
+    const closeParenCount = (displayValue.match(/\)/g) || []).length;
+
+    if (!displayValue || displayValue.charAt(displayValue.length - 1) === '(') {
+        // Case: Either the display is empty or the last character is an open parenthesis
         display.value += '(';
-        left_parentheses_counter++;
-    }
-    else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter > 0) {
+        parenthesesBalance++;
+    } else if (/\d/.test(displayValue.charAt(displayValue.length - 1)) && openParenCount > closeParenCount) {
+        // Case: The last character is a digit, and there are open parentheses to close
         display.value += ')';
-        left_parentheses_counter--;
-    }
-    else if (left_parentheses_counter == 0) {
+        parenthesesBalance--;
+    } else if (displayValue.charAt(displayValue.length - 1) === ')' && openParenCount > closeParenCount) {
+        // Case: The last character is a close parenthesis, and there are open parentheses to close
+        display.value += ')';
+        parenthesesBalance--;
+    } else if (displayValue.charAt(displayValue.length - 1) === ')' && openParenCount === closeParenCount) {
+        // Case: The last character is a close parenthesis, but there are no open parentheses to close
         display.value += '(';
-        left_parentheses_counter++;
-    }
-    else if (/^[0-9]$/.test(displayValue.charAt(displayValue.length - 1)) && left_parentheses_counter === 0) {
-        display.value += ')';
-        left_parentheses_counter++;
-    }
-    else {
-        display.value += ')';
-        left_parentheses_counter--;
+        parenthesesBalance++;
+    } else if (/[+\-x÷]/.test(displayValue.charAt(displayValue.length - 1))) {
+        // Case: The last character is an operator, add an open parenthesis
+        display.value += '(';
+        parenthesesBalance++;
+    } else if (parenthesesBalance === 0) {
+        // Case: No open parentheses yet, add an open parenthesis
+        display.value += '(';
+        parenthesesBalance++;
     }
 }
 
 function calculateResult() {
     const display = document.getElementById('display');
     const expression = display.value;
-
+    parenthesesBalance = 0;
     try {
         const formattedExpression = handleMultiplication(expression);
         const result = evaluateExpression(formattedExpression);
@@ -52,11 +66,11 @@ function handleMultiplication(expression) {
 }
 
 function replacePatterns(inputString) {
-    // Replace (8)(8) with (8)*(8)
-    let modifiedString = inputString.replace(/\((\d+)\)\((\d+)\)/g, '($1)*($2)');
+    // Replace (x)(x) with (x)*(x)
+    let modifiedString = inputString.replace(/\((\d+)\)/g, '$1');
 
-    // Replace 9(5) with 9 * (5)
-    modifiedString = modifiedString.replace(/(\d+)\((\d+)\)/g, '$1 * ($2)');
+    // Replace x(x) with x * (x)
+    modifiedString = modifiedString.replace(/(\d+)\((\d+)\)/g, '$1 * $2');
 
     return modifiedString;
 }
@@ -76,4 +90,12 @@ function parseExpression(expression) {
     } catch (error) {
         throw new Error('Error parsing expression');
     }
+}
+
+function onACButtonClick() {
+    // Reset parenthesesBalance to 0
+    parenthesesBalance = 0;
+
+    // Clear the display
+    document.getElementById('display').value = '';
 }

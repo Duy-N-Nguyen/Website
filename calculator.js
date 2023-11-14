@@ -79,12 +79,13 @@ function handleMultiplication(expression) {
     return modifiedExpression;
 }
 
+// Parse the expression using a simple expression parser
 function evaluateExpression(expression) {
-    // Parse the expression using a simple expression parser
     const result = parseExpression(expression);
     return result;
 }
 
+// Function to parse and evaluate a mathematical expression
 function parseExpression(expression) {
     try {
         return eval(expression);
@@ -93,19 +94,32 @@ function parseExpression(expression) {
     }
 }
 
+// Function to calculate the result of the expression in the display
 function calculateResult() {
+    // Get the display element
     const display = document.getElementById('display');
+    
+    // Get the current expression from the display
     const expression = display.value;
+    
+    // Reset parentheses balance to 0
     parenthesesBalance = 0;
     try {
+        // Format the expression by handling multiplication
         const formattedExpression = handleMultiplication(expression);
+        
+        // Evaluate the formatted expression and get the result
         const result = evaluateExpression(formattedExpression);
+        
+        // Update the display with the calculated result
         display.value = result;
     } catch (error) {
+        // Handle errors by displaying 'Error' in the display
         display.value = 'Error';
     }
 }
 
+// Function to handle the AC (All Clear) button click and reset parentheses balance to 0
 function onACButtonClick() {
     // Reset parenthesesBalance to 0
     parenthesesBalance = 0;

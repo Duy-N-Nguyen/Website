@@ -5,10 +5,15 @@ body, h1, h2, h3, p, ul, li {
 
 /* Style the header */
 header {
-    text-align: center;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
     background-color: #3498db; /* 60% */
     color: #fff; /* 10% */
     padding: 20px;
+}
+
+header img {
+    margin-right: 20px; /* Adjust the margin as needed to separate the image from text */
 }
 
 /* Style the navigation menu */

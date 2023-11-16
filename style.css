@@ -1,30 +1,51 @@
+/* Reset margins and padding */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the header */
+header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically in the center */
+    background-color: #3498db; /* 60% */
+    color: #fff; /* 10% */
+    padding: 20px;
+}
+
+header img {
+    margin-right: 20px; /* Adjust the margin as needed to separate the image from text */
+}
+
+/* Style the navigation menu */
+nav {
+    background-color: #333; /* 30% */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
 /* Style project sections */
 .project {
     margin: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    display: flex; /* Use flexbox for layout */
 }
 
-.project-details {
-    display: flex;
-    flex-direction: column; /* Stack the title and image vertically */
-    align-items: center; /* Center items horizontally */
+/* Additional styles for better readability */
+h1, h2, h3, p {
+    color: #333; /* Text color for better readability on light background */
 }
-
-.project-details h3 {
-    text-align: center; /* Center the project title */
-}
-
-.project-details img {
-    width: 150px; /* Set the width of the image */
-    margin-bottom: 10px; /* Add space between the image and the title */
-    align-self: flex-start; /* Align the image to the start (left) of the container */
-}
-
-.project-description {
-    flex: 1; /* Take up remaining space in the flex container */
-    padding-left: 20px; /* Add space between the title/image and the description */
-}
-

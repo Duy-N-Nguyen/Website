@@ -47,6 +47,8 @@ nav a {
     color: #333; /* Dark text color */
 }
 
+
+/*
 #about {
     background-image: url('Laptop pic.jpg');
     background-size: cover;
@@ -56,6 +58,8 @@ nav a {
     padding: 3000px; /* Increase padding to make the section larger */
     margin-bottom: 40px; /* Add margin to the bottom for spacing */
 }
+*/
+
 
 #about h2,
 #about p {

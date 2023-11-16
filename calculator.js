@@ -49,7 +49,17 @@ function calculatePercentage() {
 }
 
 // Function to handle multiplication during expression evaluation
-function handleMultiplication(expression) {
+function handleMultiplication(expression) { 
+    // Track the number of open and close parentheses in the display
+    const openParenCount = (expression.match(/\(/g) || []).length;
+    const closeParenCount = (expression.match(/\)/g) || []).length;
+    // Check if parentheses are balanced
+    if (openParenCount > closeParenCount) {
+        // Add missing closing parentheses at the end
+        const missingClosingParentheses = ')'.repeat(openParenCount - closeParenCount);
+        expression += missingClosingParentheses;
+    }
+
     // Replace 'x' with '*'
     const expressionWithMultiplication = expression.replace(/x/g, '*');
 
@@ -64,11 +74,6 @@ function handleMultiplication(expression) {
 
     // Add multiplication operators between numbers inside consecutive parentheses with a non-digit character before the decimal
     const withNonDigitDecimalMultiplication = withDecimalMultiplication.replace(/\)([^\d\.])\.(\d+)/g, ')*$1.$2');
-
-    /*
-    // Add multiplication operators between two numbers in parentheses without an operator
-    const withPatternReplacement = replacePatterns(withNonDigitDecimalMultiplication);
-    */
 
     // Replace (x)(x) with (x)*(x)
     let modifiedExpression = withNonDigitDecimalMultiplication.replace(/\((\d+)\)/g, '$1');

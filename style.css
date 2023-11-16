@@ -4,19 +4,20 @@ body, h1, h2, h3, p, ul, li {
     padding: 0;
 }
 
-/* Style the header */
+/* Style the header (Dominant - 60%) */
 header {
     text-align: center;
-    background-color: #3498db;
+    background-color: #3498db; /* Dominant color */
     color: #fff;
     padding: 20px;
 }
 
-/* Style the navigation menu */
+/* Style the navigation menu (Dominant - 60%) */
 nav {
-    background-color: #333;
+    background-color: #333; /* Another potential dominant color */
 }
 
+/* Navigation styles (Secondary - 30%) */
 nav ul {
     list-style: none;
     display: flex;
@@ -32,10 +33,11 @@ nav a {
     color: #fff;
 }
 
-/* Style project sections */
+/* Style project sections (Accent - 10%) */
 .project {
     margin: 20px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+

@@ -41,8 +41,18 @@ nav a {
     color: #333; /* Dark text color */
 }
 
-#about img.left-aligned {
-    margin-right: 200px; 
+#about {
+    background-image: url('Laptop pic.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Set text color to contrast with the background image */
+    text-align: center;
+    padding: 80px; /* Adjust padding as needed */
+}
+
+#about h2,
+#about p {
+    color: #fff; /* Set text color to contrast with the background image */
 }
 
 

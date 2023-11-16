@@ -41,6 +41,11 @@ nav a {
     color: #333; /* Dark text color */
 }
 
+#about img.left-aligned {
+    margin-right: 20px; 
+}
+
+
 /* Style project sections (Accent - 10%) */
 .project {
     margin: 20px;

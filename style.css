@@ -12,18 +12,24 @@ body {
     color: #333; /* Dark text color */
 }
 
-/* Style the header (Dominant - 60%) */
+/* Style the header with background image */
 header {
     text-align: center;
-    background-color: #5AB9C1; /* Teal accent color */
+    background-image: url('Laptop pic.jpg'); /*Image path */
+    background-size: cover;
+    background-position: center;
     color: #fff;
-    padding: 20px;
+    padding: 120px; /* Adjust padding as needed */
+    margin-bottom: 40px; /* Add margin to the bottom for spacing */
 }
 
 /* Style the navigation menu (Dominant - 60%) */
 nav {
     background-color: #e0e0e0; /* Light Gray background */
 }
+
+/* ... Your existing styles ... */
+
 
 /* Navigation styles (Secondary - 30%) */
 nav ul {

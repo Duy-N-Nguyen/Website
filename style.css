@@ -18,7 +18,7 @@ header {
     background-image: url('Laptop pic.jpg'); /*Image path */
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #333; /* Very dark gray font color */
     padding: 120px; /* Adjust padding as needed */
     margin-bottom: 40px; /* Add margin to the bottom for spacing */
 }

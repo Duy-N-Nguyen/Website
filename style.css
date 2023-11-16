@@ -22,7 +22,7 @@ header {
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
     padding: 120px; /* Adjust padding as needed */
-    margin-bottom: 40px; /* Add margin to the bottom for spacing */
+    margin-bottom:0px; /* Add margin to the bottom for spacing */
 }
 
 /* Text color for better contrast */

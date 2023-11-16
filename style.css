@@ -1,20 +1,29 @@
+
 /* Reset some default browser styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 /* Style the header (Dominant - 60%) */
 header {
     text-align: center;
-    background-color: #3498db; /* Dominant color */
+    background-color: #3498db; /* Dominant color - Blue */
     color: #fff;
     padding: 20px;
 }
 
 /* Style the navigation menu (Dominant - 60%) */
 nav {
-    background-color: #333; /* Another potential dominant color */
+    background-color: #2c3e50; /* Another potential dominant color - Dark Gray */
 }
 
 /* Navigation styles (Secondary - 30%) */
@@ -30,14 +39,24 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #fff;
+    color: #ecf0f1; /* Light Gray */
 }
 
 /* Style project sections (Accent - 10%) */
 .project {
     margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #bdc3c7; /* Light Gray border */
     border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Optional: Hover effect for links */
+nav a:hover {
+    color: #3498db; /* Change to Dominant color on hover */
+}
+
+.project:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

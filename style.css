@@ -46,14 +46,14 @@ nav a {
     margin: 20px;
     padding: 20px;
     background-color: #fff; /* White background */
-    border: 1px solid #4CAF50; /* Teal accent color border */
+    border: 1px solid #5AB9C1; /* Teal accent color border */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Optional: Hover effect for links */
 nav a:hover {
-    color: #4CAF50; /* Change to Teal accent color on hover */
+    color: #5AB9C1; /* Change to Teal accent color on hover */
 }
 
 .project:hover {

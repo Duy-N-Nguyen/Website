@@ -59,7 +59,7 @@ nav a {
 
 
 
-/* Style project sections (Accent - 10%) */
+/* Style about section */
 .about {
     margin: 20px;
     padding: 20px;
@@ -68,14 +68,12 @@ nav a {
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 /* Optional: Hover effect for links */
 nav a:hover {
     color: #5AB9C1; /* Change to Teal accent color on hover */
 }
 
-.project:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
 
 
 

@@ -1,3 +1,4 @@
+/* Reset some default browser styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
@@ -6,14 +7,14 @@ body, h1, h2, h3, p, ul, li {
 /* Style the header */
 header {
     text-align: center;
-    background-color: #3498db; /* 60% */
-    color: #fff; /* 10% */
+    background-color: #3498db;
+    color: #fff;
     padding: 20px;
 }
 
 /* Style the navigation menu */
 nav {
-    background-color: #333; /* 30% */
+    background-color: #333;
 }
 
 nav ul {
@@ -37,9 +38,4 @@ nav a {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-/* Additional styles for better readability */
-h1, h2, h3, p {
-    color: #333; /* Text color for better readability on light background */
 }

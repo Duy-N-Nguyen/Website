@@ -57,23 +57,27 @@ nav a {
 }
 
 
-/*
-#about {
-    background-image: url('Laptop pic.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff; /* Set text color to contrast with the background image */
-    text-align: center;
-    padding: 3000px; /* Increase padding to make the section larger */
-    margin-bottom: 40px; /* Add margin to the bottom for spacing */
-}
-*/
 
 
-#about h2,
-#about p {
-    color: #fff; /* Set text color to contrast with the background image */
+/* Style project sections (Accent - 10%) */
+.about {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #5AB9C1; /* Teal accent color border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+/* Optional: Hover effect for links */
+nav a:hover {
+    color: #5AB9C1; /* Change to Teal accent color on hover */
+}
+
+.project:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 /* Style project sections (Accent - 10%) */

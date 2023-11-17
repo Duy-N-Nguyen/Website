@@ -57,13 +57,17 @@ function handleMultiplication(expression) {
     if (openParenCount > closeParenCount) {
         // Remove the last character if it is '('
         if (expression.charAt(expression.length - 1) === '(') {
-            expression = expression.slice(0, -1);
+            // Remove the last character if it is '('
+            while (expression.endsWith('(')) {
+                expression = expression.slice(0, -1);
+            }
         } else {
             // Add missing closing parentheses at the end
             const missingClosingParentheses = ')'.repeat(openParenCount - closeParenCount);
             expression += missingClosingParentheses;
         }
     }
+
 
     // Replace 'x' with '*'
     const expressionWithMultiplication = expression.replace(/x/g, '*');

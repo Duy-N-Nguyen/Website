@@ -53,11 +53,16 @@ function handleMultiplication(expression) {
     // Track the number of open and close parentheses in the display
     const openParenCount = (expression.match(/\(/g) || []).length;
     const closeParenCount = (expression.match(/\)/g) || []).length;
-    // Check if parentheses are balanced
+
     if (openParenCount > closeParenCount) {
-        // Add missing closing parentheses at the end
-        const missingClosingParentheses = ')'.repeat(openParenCount - closeParenCount);
-        expression += missingClosingParentheses;
+        // Remove the last character if it is '('
+        if (expression.charAt(expression.length - 1) === '(') {
+            expression = expression.slice(0, -1);
+        } else {
+            // Add missing closing parentheses at the end
+            const missingClosingParentheses = ')'.repeat(openParenCount - closeParenCount);
+            expression += missingClosingParentheses;
+        }
     }
 
     // Replace 'x' with '*'
@@ -106,6 +111,13 @@ function calculateResult() {
     
     // Get the current expression from the display
     const expression = display.value;
+    
+    /*    
+    // Check if the last character is '(' and remove it
+    if (expression.charAt(expression.length - 1) === '(') {
+        display.value = expression.slice(0, -1);
+    }
+    */
     
     // Reset parentheses balance to 0
     parenthesesBalance = 0;

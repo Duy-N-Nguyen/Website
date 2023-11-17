@@ -18,7 +18,7 @@ header {
     text-align: center;
     background-image: url('Laptop pic.jpg'); /* Replace with your image path */
     background-size: cover;
-    background-position: center 75%; /* Adjust vertical position as needed */
+    background-position: center 80%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
     padding: 100px; /* Adjust padding as needed */

@@ -12,7 +12,6 @@ body {
     color: #333; /* Dark text color */
 }
 
-
 /* Style the header with semi-transparent background color */
 header {
     text-align: center;
@@ -31,14 +30,10 @@ header h2, header p {
     color: #fff; /* White text color for better contrast */
 }
 
-
-
 /* Style the navigation menu (Dominant - 60%) */
 nav {
     background-color: #f7f7f7; /* Light background */
 }
-
-
 
 /* Navigation styles (Secondary - 30%) */
 nav ul {
@@ -55,9 +50,6 @@ nav a {
     text-decoration: none;
     color: #4E3310; /* Dark text color */
 }
-
-
-
 
 /* Dropdown styles */
 .dropdown {

@@ -1,0 +1,108 @@
+/* Reset some default styles and set font family */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Main container styles (Dominant Color - 60%) */
+.container {
+    width: 100%;
+    height: 100vh;
+    background: #e3f9ff; /* Light blue background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Calculator container styles */
+.calculator {
+    background: #1F1F1F; /* Dark gray background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Calculator input styles (Secondary Color - 30%) */
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background: #28282A; /* Dark gray for buttons */
+    font-size: 20px;
+    color: #C3E7FF; /* Light blue text on dark gray */
+    cursor: pointer;
+    margin: 10px;
+}
+
+/* Calculator display styles */
+.calculator form .display {
+    background: #38393D; /* Slightly lighter gray for the display */
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.calculator form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+.calculator form input[value="AC"],
+.calculator form input[value="( )"],
+.calculator form input[value="%"],
+.calculator form input[value="÷"],
+.calculator form input[value="7"],
+.calculator form input[value="8"],
+.calculator form input[value="9"],
+.calculator form input[value="x"],
+.calculator form input[value="4"],
+.calculator form input[value="5"],
+.calculator form input[value="6"],
+.calculator form input[value="-"],
+.calculator form input[value="1"],
+.calculator form input[value="2"],
+.calculator form input[value="3"],
+.calculator form input[value="+"],
+.calculator form input[value="0"],
+.calculator form input[value="."],
+.calculator form input[value="DE"],
+.calculator form input[value="="]
+{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Use 50% to make them fully rounded */
+    background: #28282A;
+    font-size: 30px;
+    color: #C3E7FF;
+    cursor: pointer;
+    margin: 1px;
+}
+
+/* Specific button styles (Accent Color - 10%) */
+.calculator form input[value="="] {
+    background: #0742A0;
+    color: #C3E7FF;
+}
+
+/* Other specific button styles */
+.calculator form input[value="AC"] {
+    background: #0F5324;
+    color: #C3E7FF;
+}
+
+.calculator form input[value="÷"],
+.calculator form input[value="( )"],
+.calculator form input[value="%"],
+.calculator form input[value="x"],
+.calculator form input[value="-"],
+.calculator form input[value="+"] {
+    background: #004A77;
+    color: #C3E7FF;
+}

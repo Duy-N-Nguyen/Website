@@ -87,3 +87,23 @@ nav a {
 .dropdown-content a:hover {
     background-color: #ddd;
 }
+
+/* Style project sections (Accent - 10%) */
+#projects {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #5AB9C1; /* Teal accent color border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
+}
+
+/* Optional: Hover effect for links within #projects */
+#projects a:hover {
+    color: #5AB9C1; /* Change to Teal accent color on hover */
+}
+
+#projects:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}

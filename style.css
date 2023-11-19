@@ -21,9 +21,9 @@ header {
     background-position: center 80%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
-    padding: 100px; /* Adjust padding as needed */
     margin-bottom:0px; /* Add margin to the bottom for spacing */
-    height: 200px; /* Sets the height of the element to 200 pixels */
+    padding: 100px; /* Adjust padding as needed */
+    height: 140px; /* Sets the height of the element to 200 pixels */
 }
 
 /* Text color for better contrast */
@@ -59,6 +59,45 @@ nav a {
 
 
 
+/* Dropdown styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Optional: Style the dropdown links */
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+
+
+
+
+
+
 /* Style about section */
 .about {
     margin: 20px;
@@ -67,12 +106,14 @@ nav a {
     border: 1px solid #5AB9C1; /* Teal accent color border */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
 }
 
 /* Optional: Hover effect for links */
 nav a:hover {
     color: #5AB9C1; /* Change to Teal accent color on hover */
 }
+
 
 
 
@@ -86,6 +127,7 @@ nav a:hover {
     border: 1px solid #5AB9C1; /* Teal accent color border */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
 }
 
 
@@ -99,6 +141,7 @@ nav a:hover {
     border: 1px solid #5AB9C1; /* Teal accent color border */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
 }
 
 /* Optional: Hover effect for links */
@@ -118,4 +161,36 @@ nav a:hover {
     border: 1px solid #5AB9C1; /* Teal accent color border */
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
 }
+/* Optional: Hover effect for links */
+nav a:hover {
+    color: #5AB9C1; /* Change to Teal accent color on hover */
+}
+
+#contact:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* Style for the link */
+a {
+    text-decoration: none; /* Removes the underline */
+    color: #3498db; /* Set your desired link color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect for the link */
+a:hover {
+    color: #2980b9; /* Set the color when hovering over the link */
+}
+
+
+
+

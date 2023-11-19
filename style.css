@@ -16,7 +16,7 @@ body {
 /* Style the header with semi-transparent background color */
 header {
     text-align: center;
-    background-image: url('Laptop pic.jpg'); /* Replace with your image path */
+    background-image: url('images/Laptop pic.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center 80%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */

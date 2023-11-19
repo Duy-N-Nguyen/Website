@@ -15,7 +15,7 @@ body {
 /* Style the header with semi-transparent background color */
 header {
     text-align: center;
-    background-image: url('images/Laptop pic.jpg'); /* Replace with your image path */
+    background-image: url('about header.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center 80%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
@@ -83,8 +83,24 @@ nav a {
     background-color: #ddd;
 }
 
+/* Style about section */
+.about {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #5AB9C1; /* Teal accent color border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px; /* Adjust the font size */
+}
 
+/* Optional: Hover effect for links */
+nav a:hover {
+    color: #5AB9C1; /* Change to Teal accent color on hover */
+}
 
-
+.about:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
 
 

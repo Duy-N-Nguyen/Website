@@ -17,7 +17,7 @@
     <nav>
         <ul>
             <li><a href="../../index.html">Home</a></li>
-            <li class="dropdown">
+            <li class="dropdown" onclick="toggleDropdown()">
                 <a href="#projects">Projects</a>
                 <div class="dropdown-content">
                     <a href="project1.html" id="project1-link">Project 1</a>
@@ -28,6 +28,14 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
+
+    <!-- Function to toggle the visibility of the dropdown content -->
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        }
+    </script>
 
 
 

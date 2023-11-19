@@ -16,9 +16,9 @@ body {
 /* Style the header with semi-transparent background color */
 header {
     text-align: center;
-    background-image: url('Project 1 Header.jpg'); /* Replace with your image path */
+    background-image: url('Project 2 Header.jpg'); /* Replace with your image path */
     background-size: cover;
-    background-position: center 80%; /* Adjust vertical position as needed */
+    background-position: center 75%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
     margin-bottom:0px; /* Add margin to the bottom for spacing */

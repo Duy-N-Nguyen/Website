@@ -34,10 +34,9 @@ header h2, header p {
 
 /* Style the navigation menu (Dominant - 60%) */
 nav {
-    background-color: #e0e0e0; /* Light Gray background */
+    background-color: #f7f7f7; /* Light background */
 }
 
-/* ... Your existing styles ... */
 
 
 /* Navigation styles (Secondary - 30%) */
@@ -53,7 +52,7 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333; /* Dark text color */
+    color: #4E3310; /* Dark text color */
 }
 
 
@@ -74,6 +73,19 @@ nav a:hover {
     color: #5AB9C1; /* Change to Teal accent color on hover */
 }
 
+
+
+
+
+/* Style the projects section */
+#projects {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border: 1px solid #5AB9C1; /* Teal accent color border */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 
 

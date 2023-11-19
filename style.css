@@ -23,6 +23,7 @@ header {
     color: #fff; /* White text color for better contrast */
     padding: 100px; /* Adjust padding as needed */
     margin-bottom:0px; /* Add margin to the bottom for spacing */
+    height: 200px; /* Sets the height of the element to 200 pixels */
 }
 
 /* Text color for better contrast */

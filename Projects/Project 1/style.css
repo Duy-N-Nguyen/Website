@@ -21,8 +21,9 @@ header {
     background-position: center 80%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
-    padding: 192px; /* Adjust padding as needed */
+    padding: 190; /* Adjust padding as needed */
     margin-bottom:0px; /* Add margin to the bottom for spacing */
+    height: 400px; /* Sets the height of the element to xxx pixels */
 }
 
 /* Text color for better contrast */

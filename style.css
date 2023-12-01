@@ -17,12 +17,12 @@ header {
     text-align: center;
     background-image: url('images/Laptop pic.jpg'); /* Replace with your image path */
     background-size: cover;
-    background-position: center 80%; /* Adjust vertical position as needed */
+    background-position: center 85%; /* Adjust vertical position as needed */
     background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
     color: #fff; /* White text color for better contrast */
     margin-bottom:0px; /* Add margin to the bottom for spacing */
     padding: 100px; /* Adjust padding as needed */
-    height: 140px; /* Sets the height of the element to 200 pixels */
+    height: 140px; /* Sets the height of the element */
 }
 
 /* Text color for better contrast */
